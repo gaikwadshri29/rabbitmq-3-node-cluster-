@@ -4,7 +4,6 @@ metadata:
   name: rabbitmq-config
 data:
   rabbitmq.conf: |
-    # Default RabbitMQ settings
     listeners.tcp.default = 5672
     management.listener.port = 15672
     loopback_users.guest = false
