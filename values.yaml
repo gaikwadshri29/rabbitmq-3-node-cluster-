@@ -1,0 +1,24 @@
+replicaCount: 3
+resources:
+  requests:
+    memory: "2Gi"
+    cpu: "1"
+  limits:
+    memory: "4Gi"
+    cpu: "2"
+persistence:
+  enabled: true
+  storageClass: "standard"
+  accessMode: ReadWriteOnce
+  size: 8Gi
+rabbitmq:
+  username: "admin"
+  password: "admin"
+  erlangCookie: "secret_cookie"
+  managementEnabled: true
+  defaultVhost: "/"
+  defaultUser: "guest"
+  defaultPassword: "guest"
+cluster:
+  enabled: true
+  nodeDiscoveryMethod: "dns" 
